@@ -1,36 +1,32 @@
-ÎÄµµ½á¹¹£º
-caffe/data/digitRecog:ÑµÁ·ºÍ²âÊÔÊý¾Ý
-caffe/tools/:ÌáÈ¡ÌØÕ÷µÄ´úÂëÎÄ¼þ
-caffe/build/example/digitRecog/:±àÒëÉú³ÉµÄbinÎÄ¼þ
-caffe/example/digitRecog/:ÆäËûËùÓÐÏà¹ØÎÄ¼þ
+æ–‡æ¡£ç»“æž„ï¼š
+caffe/data/digitRecog:è®­ç»ƒå’Œæµ‹è¯•æ•°æ®
+caffe/tools/:æå–ç‰¹å¾çš„ä»£ç æ–‡ä»¶
+caffe/build/example/digitRecog/:ç¼–è¯‘ç”Ÿæˆçš„binæ–‡ä»¶
+caffe/example/digitRecog/:å…¶ä»–æ‰€æœ‰ç›¸å…³æ–‡ä»¶
 
 =================
 
-1¡¢±àÒë,Éú³É
-./build/examples/digitRecog/convert_digitRecog_train_lmdb.binºÍ./build/examples/digitRecog/convert_digitRecog_lmdb.bin 
+1ã€ç¼–è¯‘,ç”Ÿæˆ
+./build/examples/digitRecog/convert_digitRecog_train_lmdb.binå’Œ./build/examples/digitRecog/convert_digitRecog_lmdb.bin 
 
-make all ¨Cj8
+make all â€“j8
 
-
-2¡¢°Ñcsv¸ñÊ½µÄÊý¾Ý×ª»»³Élmdb¸ñÊ½
-
-
+2ã€æŠŠcsvæ ¼å¼çš„æ•°æ®è½¬æ¢æˆlmdbæ ¼å¼
 ./examples/digitRecog/create_digitRecog.sh
 
-3¡¢ÑµÁ·
 
-
-
+3ã€è®­ç»ƒ
 ./examples/digitRecog/digitRecog_train.sh
 
 
-
-4¡¢ÌáÈ¡pro²ãÌØÕ÷£¬µÃµ½×îÖÕ½á¹ûÎÄ¼þ./build/examples/digitRecog/feature0.csv
-
+4ã€æå–proå±‚ç‰¹å¾ï¼Œå¾—åˆ°æœ€ç»ˆç»“æžœæ–‡ä»¶./build/examples/digitRecog/feature0.csv
 ./examples/digitRecog/digitRecog_extract_features.sh 
 
 
+5.ä¿å­˜ã€è§£æžæ—¥å¿—
+./examples/digitRecog/digitRecog_train.sh 2>&1 |tee digitRecog_train.log
 
+./tools/extra/parse_log.sh digitRecog_train.log
 
 
 
